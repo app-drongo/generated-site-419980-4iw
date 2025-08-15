@@ -1,52 +1,47 @@
-// Enhanced by AI on 2025-08-15T00:22:04.630Z
-// Section: features
-// Category: features
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { 
-  Zap, 
-  Shield, 
-  Smartphone, 
-  Globe, 
-  BarChart3, 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Zap,
+  Shield,
+  Smartphone,
+  Globe,
+  BarChart3,
   Palette,
   Code2,
   Headphones,
   Lock
-} from "lucide-react"
-import Link from "next/link"
+} from "lucide-react";
 
-export default function Features() {
+export default function CardsFeatures() {
   const features = [
     {
       icon: Zap,
-      title: "Blazing Fast",
+      title: "Lightning Fast",
       description: "Optimized performance with sub-second load times and smooth interactions.",
       badge: "Performance"
     },
     {
       icon: Shield,
-      title: "Secure by Design",
+      title: "Enterprise Security",
       description: "Bank-level security with end-to-end encryption and compliance certifications.",
       badge: "Security"
     },
     {
       icon: Smartphone,
-      title: "Mobile Friendly",
+      title: "Mobile First",
       description: "Responsive design that works perfectly on all devices and screen sizes.",
       badge: "Design"
     },
     {
       icon: Globe,
-      title: "Global Reach",
+      title: "Global CDN",
       description: "Worldwide content delivery network ensures fast loading anywhere.",
       badge: "Infrastructure"
     },
     {
       icon: BarChart3,
       title: "Advanced Analytics",
-      description: "Deep insights and real-time metrics to track your team's progress.",
+      description: "Deep insights and real-time metrics to track your success.",
       badge: "Analytics"
     },
     {
@@ -73,7 +68,7 @@ export default function Features() {
       description: "Your data stays yours. We never sell or share your information.",
       badge: "Privacy"
     }
-  ]
+  ];
 
   return (
     <section className="py-24 bg-gradient-to-b from-background to-muted/20">
@@ -84,29 +79,29 @@ export default function Features() {
             Features
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            Powerful Project Management
+            Everything You Need to
             <span className="block bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Made Easy
+              Succeed Online
             </span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Streamline your team's workflow with our comprehensive project management 
-            platform, designed to boost productivity and collaboration.
+            Powerful features designed to help you build, grow, and scale your business
+            with confidence and ease.
           </p>
         </div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
-            const Icon = feature.icon
+            const Icon = feature.icon;
             return (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="group relative overflow-hidden border-border/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
               >
                 {/* Background Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
+
                 <CardHeader className="relative">
                   <div className="flex items-center gap-4 mb-2">
                     <div className="size-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
@@ -120,7 +115,7 @@ export default function Features() {
                     {feature.title}
                   </CardTitle>
                 </CardHeader>
-                
+
                 <CardContent className="relative">
                   <CardDescription className="text-base leading-relaxed">
                     {feature.description}
@@ -130,25 +125,25 @@ export default function Features() {
                 {/* Hover Effect Border */}
                 <div className="absolute inset-0 rounded-lg border border-transparent group-hover:border-primary/20 transition-colors duration-300" />
               </Card>
-            )
+            );
           })}
         </div>
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="text-muted-foreground mb-4">
-            Ready to transform your team's productivity?
+            Ready to experience all these features?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/pricing" className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors">
-              View Pricing
-            </Link>
-            <Link href="/features" className="px-6 py-3 border border-border rounded-lg font-medium hover:bg-accent transition-colors">
-              Explore All Features
-            </Link>
+            <button className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors">
+              Start Free Trial
+            </button>
+            <button className="px-6 py-3 border border-border rounded-lg font-medium hover:bg-accent transition-colors">
+              View All Features
+            </button>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
